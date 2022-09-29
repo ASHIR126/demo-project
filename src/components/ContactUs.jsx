@@ -1,99 +1,51 @@
-import React from 'react'
+import { AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react'
+import '../assets/css/Bootstrapstyle.css'
+import OpenModall from './OpenModall';
 
-const ContactUs = () => {
+
+export const ContactUs = () => {
+    const [modal, setModal] = useState(false)
+
+    // const toggleModal = () => {
+    //     setModal(!modal)
+    // }
+
     return (
-        <div>
+        <>
 
-            <section id="contactUs">
-                <div className="container">
-                    <article id="main-col">
-                        <h1 className="page-title">Services</h1>
-                        <ul id="services">
-                            <li>
-                                <h3>Coffee Design</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Vivamus mi augue, viverra sit amet ultricies at, vulputate id
-                                    lorem. Nulla facilisi.
-                                </p>
-                                <p>Pricing: $1,000 - $3,000</p>
-                            </li>
-                            <li>
-                                <h3>Coffee Maintenance</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                    irure dolor in reprehenderit in voluptate velit esse cillum
-                                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                    cupidatat non proident, sunt in culpa qui officia deserunt
-                                    mollit anim id est laborum
-                                </p>
-                                <p>Pricing: $250 per month</p>
-                            </li>
-                            <li>
-                                <h3>Coffee Cost</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                    irure dolor in reprehenderit in voluptate velit esse cillum
-                                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                    cupidatat non proident, sunt in culpa qui officia deserunt
-                                    mollit anim id est laborum
-                                </p>
-                                <p>Pricing: $25 per month</p>
-                            </li>
-                        </ul>
-                    </article>
 
-                    <aside id="sidebar">
-                        <div className="dark">
-                            <h3>Contact Us</h3>
-                            <form className="contactForm">
-                                <div>
-                                    <label>First Name</label>
-                                    <br />
-                                    <input type="text" placeholder="first name" />
-                                </div>
-                                <div>
-                                    <label>Last Number</label>
-                                    <br />
-                                    <input type="text" placeholder="last name" />
-                                </div>
-                                <div>
-                                    <label>Email</label>
-                                    <br />
-                                    <input type="email" placeholder="Emial Address" />
-                                </div>
-                                <div>
-                                    <label>Phone Number</label>
-                                    <br />
-                                    <input type="number" placeholder="Phone Number" />
-                                </div>
-                                <div>
-                                    <label>Address</label>
-                                    <br />
-                                    <textarea placeholder="address"></textarea>
-                                </div>
-                                <div>
-                                    <label>Message</label>
-                                    <br />
-                                    <textarea placeholder="Message"></textarea>
-                                </div>
-                                <button className="button" type="submit">
-                                    Send
-                                </button>
-                            </form>
-                        </div>
-                    </aside>
+            <section className="contact" id="ContactUs" >
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1197183.8373802372!2d-1.9415093691103689!3d6.781986417238027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb96f349e85efd%3A0xb8d1e0b88af1f0f5!2sKumasi+Central+Market!5e0!3m2!1sen!2sth!4v1532967884907" width="100%" height="500px" frameBorder="0" style={{ border: 0 }} allowFullScreen></iframe>
                 </div>
+                <div className="container" >
+
+                    <div className="col-md-10 col-md-offset-1">
+
+                        <div className="wrapper">
+                            <div className="section-heading">
+                                <span>Contact Us</span>
+                                <h2>Vivamus nec vehicula felis</h2>
+                            </div>
+                            <button className="modal-btn" onClick={() => setModal(!modal)}>Talk to us</button>
+
+                        </div>
+
+                        <AnimatePresence>
+                            {
+                                modal && <OpenModall closeModal={setModal} />
+                            }
+                        </AnimatePresence>
+                    </div>
+
+                </div>
+
             </section>
 
-        </div>
+
+
+
+        </>
     )
 }
-
-export default ContactUs

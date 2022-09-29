@@ -1,0 +1,47 @@
+section.contact .section-heading {
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+/* Modal button */
+
+.modal-btn {
+  display: inline-block;
+  background-color: #4883ff;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 16px;
+  text-decoration: none;
+  border: 2px solid #4883ff;
+  transition: all 0.5s;
+}
+.modal-btn:hover {
+  background-color: transparent;
+  color: #4883ff;
+}
+@keyframes totop-in {
+  0% {
+    top: 600px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes totop-out {
+  0% {
+    top: 0px;
+    opacity: 1;
+  }
+  100% {
+    top: -100%;
+    opacity: 0;
+  }
+}
