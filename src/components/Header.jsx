@@ -1,11 +1,13 @@
 import React from 'react'
 import '../assets/css/Bootstrapstyle.css'
+import Navabar from './Navabar'
 export const Header = () => {
 
     
     return (
         <>
             <div>
+                <Navabar />
                 <section className="banner" id="top">
                     <div className="container">
                         <div className="row">

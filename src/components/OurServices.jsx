@@ -1,9 +1,11 @@
 import React from 'react'
+import Navabar from './Navabar'
 
 const OurServices = () => {
     return (
         <>
-            <section className="our-services"  id='OurServices'>
+            <Navabar />
+            <section className="our-services"  >
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
@@ -82,7 +84,7 @@ const OurServices = () => {
             </section></>
         // Map Conatainer
 
-        
+
 
 
     )

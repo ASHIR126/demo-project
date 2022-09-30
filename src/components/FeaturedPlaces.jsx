@@ -1,8 +1,10 @@
 import React from 'react'
+import Navabar from './Navabar'
 
 const FeaturedPlaces = () => {
     return (
         <>
+        <Navabar />
             <section className="featured-places" id="Blog">
                 <div className="container">
                     <div className="row">
